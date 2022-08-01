@@ -32,7 +32,7 @@ def enter_or_exit():
                 print(key, book_list[key])
             break
         else:
-            print("No worries. Thanks for stopping by!")
+            print("No worries. Thanks for stopping by!\n")
             continue
 
 
@@ -45,34 +45,47 @@ def order_book():
         print(
             """If you wish to place an order, please """
             """enter the number of the title you wish """
-            """ to order (i.e. 1 for the first title """
+            """to order (i.e. 1 for the first title """
             """2 for the second title etc.). If there """
             """is nothing in our shop for you today don't worry. """
-            """Maybe next time and see you soon."""
+            """Press any key to exit :)"""
         )
+        print()
         select_book = input("Enter the number now: ")
         if select_book == "1":
             print(f"You selected: {book_list.get('1')}")
+            break
         elif select_book == "2":
             print(f"You selected: {book_list.get('2')}")
+            break
         elif select_book == "3":
             print(f"You selected: {book_list.get('3')}")
+            break
         elif select_book == "4":
             print(f"You selected: {book_list.get('4')}")
+            break
         elif select_book == "5":
             print(f"You selected: {book_list.get('5')}")
+            break
         elif select_book == "6":
             print(f"You selected: {book_list.get('6')}")
+            break
         elif select_book == "7":
             print(f"You selected: {book_list.get('7')}")
+            break
         elif select_book == "8":
             print(f"You selected: {book_list.get('8')}")
+            break
         else:
+            print("No worries :)\n")
             enter_or_exit()
 
 
 # works but also need to validate user input
 def user_data():
+    """"
+    Function to take and check user's details
+    """
     while True:
         print("Great. Let me now grab your details.")
         fname = input("Please enter your first name: ")
@@ -90,7 +103,6 @@ def user_data():
             print("No worries. Let's fix it!")
             print("Just enter them again to correct them.")
             
-
 
 def update_sheet():
     """"
@@ -112,4 +124,9 @@ def main():
     Main function, which includes
     all functions to run the program
     """
-    pass
+    enter_or_exit()
+    order_book()
+    user_data()
+
+
+main()
