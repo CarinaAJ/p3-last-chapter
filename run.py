@@ -2,14 +2,14 @@ import time
 import sys
 
 book_list = {
-    "1": "Title1 - Author1",
-    "2": "Title2 - Author2",
-    "3": "Title3 - Author3",
-    "4": "Title4 - Author4",
-    "5": "Title5 - Author5",
-    "6": "Title6 - Author6",
-    "7": "Title7 - Author7",
-    "8": "Title8 - Author8",
+    "1.": "Rumo - W.Moers, £20",
+    "2.": "The Sober Diaries - C.Pooley, £9.99",
+    "3.": "The Flat Share - B.O'Leary, £8.99",
+    "4.": "The Swarm - F.Schatzing, £16.99",
+    "5.": "Lolita - V.Nabokov, £9.99",
+    "6.": "Cybercrime & Digital Forensics - T.Holt, £32.99",
+    "7.": "IT - S.King, £10.99",
+    "8.": "The Book Thief - M.Zusak, £8.99",
 }
 
 
@@ -37,6 +37,7 @@ def enter_or_exit():
             sys.exit()
 #           continue
 
+enter_or_exit()
 
 #good function to use try and except to catch validation error
 def order_book():
@@ -55,28 +56,28 @@ def order_book():
         print()
         select_book = input("Enter the number now: ")
         if select_book == "1":
-            print(f"You selected: {book_list.get('1')}")
+            print(f"You selected: {book_list.get('1.')}")
             break
         elif select_book == "2":
-            print(f"You selected: {book_list.get('2')}")
+            print(f"You selected: {book_list.get('2.')}")
             break
         elif select_book == "3":
-            print(f"You selected: {book_list.get('3')}")
+            print(f"You selected: {book_list.get('3.')}")
             break
         elif select_book == "4":
-            print(f"You selected: {book_list.get('4')}")
+            print(f"You selected: {book_list.get('4.')}")
             break
         elif select_book == "5":
-            print(f"You selected: {book_list.get('5')}")
+            print(f"You selected: {book_list.get('5.')}")
             break
         elif select_book == "6":
-            print(f"You selected: {book_list.get('6')}")
+            print(f"You selected: {book_list.get('6.')}")
             break
         elif select_book == "7":
-            print(f"You selected: {book_list.get('7')}")
+            print(f"You selected: {book_list.get('7.')}")
             break
         elif select_book == "8":
-            print(f"You selected: {book_list.get('8')}")
+            print(f"You selected: {book_list.get('8.')}")
             break
         else:
             print("No worries. Have a lovely day :)")
