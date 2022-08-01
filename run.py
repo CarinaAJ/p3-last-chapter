@@ -1,4 +1,5 @@
 import time 
+import sys
 
 book_list = {
     "1": "Title1 - Author1",
@@ -33,7 +34,8 @@ def enter_or_exit():
             break
         else:
             print("No worries. Thanks for stopping by!\n")
-            continue
+            sys.exit()
+#           continue
 
 
 #good function to use try and except to catch validation error
@@ -48,7 +50,7 @@ def order_book():
             """to order (i.e. 1 for the first title """
             """2 for the second title etc.). If there """
             """is nothing in our shop for you today don't worry. """
-            """Press any key to exit :)"""
+            """Press any other key to exit :)"""
         )
         print()
         select_book = input("Enter the number now: ")
@@ -77,8 +79,9 @@ def order_book():
             print(f"You selected: {book_list.get('8')}")
             break
         else:
-            print("No worries :)\n")
-            enter_or_exit()
+            print("No worries. Have a lovely day :)")
+            sys.exit()
+#           enter_or_exit()
 
 
 # works but also need to validate user input
