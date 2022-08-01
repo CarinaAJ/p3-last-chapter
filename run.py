@@ -67,13 +67,25 @@ def order_book():
             pass
 
 
-def user_details():
+# works but also need to validate user input
+def user_data():
     while True:
         print("Great. Let me now grab your details.")
-        enter_fname = input("Please enter your first name: ")
-        enter_lname = input("Please enter your last name: ")
-        email_address = input("Please enter your email address: ")
-
+        fname = input("Please enter your first name: ")
+        lname = input("Please enter your last name: ")
+        email = input("Please enter your email address: ")
+        print("Perfect. These are your details:\n")
+        print(f"First name: {fname}\nLast name: {lname}\nEmail: {email}")
+        print()
+        print("If your details are correct enter 1 and 2 if not")
+        check_details = input("Please enter now: ")
+        if check_details == "1":
+            print("Super! Let's finish your order then.")
+            break            
+        else:
+            print("No worries. Let's fix it!")
+            print("Just enter them again to correct them.")
+            
 
 
 
