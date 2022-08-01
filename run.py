@@ -25,7 +25,8 @@ def enter_or_exit():
             """Enter Y to see our selection """
             """or N to exit: """
         )
-        if decision_user == "Y":
+        decision_user = decision_user.strip()
+        if (decision_user == "Y" or decision_user == "y"):
             print("Amazing! This is our list: \n")
             for key in book_list:
                 print(key, book_list[key])
@@ -33,6 +34,8 @@ def enter_or_exit():
         else:
             print("No worries. Thanks for stopping by!")
             break
+
+enter_or_exit()
 
 #good function to use try and except to catch validation error
 def order_book():
@@ -86,11 +89,6 @@ def user_data():
             print("No worries. Let's fix it!")
             print("Just enter them again to correct them.")
             
-
-
-
-
-
 
 
 def update_sheet():
