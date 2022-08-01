@@ -11,7 +11,7 @@ book_list = {
     "8": "Title8 - Author8",
 }
 
-#works, just need to make sure to add validation error 
+
 def enter_or_exit():
     """"
     Function to either continue to browse
@@ -33,9 +33,8 @@ def enter_or_exit():
             break
         else:
             print("No worries. Thanks for stopping by!")
-            break
+            continue
 
-enter_or_exit()
 
 #good function to use try and except to catch validation error
 def order_book():
@@ -47,7 +46,9 @@ def order_book():
             """If you wish to place an order, please """
             """enter the number of the title you wish """
             """ to order (i.e. 1 for the first title """
-            """2 for the second title etc.)"""
+            """2 for the second title etc.). If there """
+            """is nothing in our shop for you today don't worry. """
+            """Maybe next time and see you soon."""
         )
         select_book = input("Enter the number now: ")
         if select_book == "1":
@@ -67,7 +68,7 @@ def order_book():
         elif select_book == "8":
             print(f"You selected: {book_list.get('8')}")
         else:
-            pass
+            enter_or_exit()
 
 
 # works but also need to validate user input
