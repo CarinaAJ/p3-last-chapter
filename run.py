@@ -35,9 +35,7 @@ def enter_or_exit():
         else:
             print("No worries. Thanks for stopping by!\n")
             sys.exit()
-#           continue
 
-enter_or_exit()
 
 #good function to use try and except to catch validation error
 def order_book():
@@ -82,7 +80,6 @@ def order_book():
         else:
             print("No worries. Have a lovely day :)")
             sys.exit()
-#           enter_or_exit()
 
 
 # works but also need to validate user input
@@ -94,9 +91,9 @@ def user_data():
         print("Great. Let me now grab your details.")
         fname = input("Please enter your first name: ")
         lname = input("Please enter your last name: ")
-        email = input("Please enter your email address: ")
+        mobile = int(input("Please enter your mobile number: "))
         print("Perfect. These are your details:\n")
-        print(f"First name: {fname}\nLast name: {lname}\nEmail: {email}")
+        print(f"First name: {fname}\nLast name: {lname}\nPhone: {mobile}")
         print()
         print("If your details are correct enter 1 and 2 if not")
         check_details = input("Please enter now: ")
@@ -120,7 +117,16 @@ def print_receipt():
     """"
     Function to print the receipt
     """
-    pass
+    print(
+        """Thank you for supporting your local bookshop! """
+        """Your order will be ready to collect """
+        """within the next 1 - 3 working days. """
+        """But we'll send you a text message when it is ready."""
+    )
+    print("And here is your receipt:")
+    print("----------------------------")
+    print()
+    
 
 
 def main():
