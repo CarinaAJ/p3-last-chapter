@@ -52,30 +52,39 @@ def order_book():
             """Press any other key to exit :)"""
         )
         print()
+        global select_book
         select_book = input("Enter the number now: ")
         if select_book == "1":
-            print(f"You selected: {book_list.get('1.')}")
+            select_book = book_list.get('1.')
+            print(f"You selected: {select_book}")
             break
         elif select_book == "2":
-            print(f"You selected: {book_list.get('2.')}")
+            select_book = book_list.get('2.')
+            print(f"You selected: {select_book}")
             break
         elif select_book == "3":
-            print(f"You selected: {book_list.get('3.')}")
+            select_book = book_list.get('3.')
+            print(f"You selected: {select_book}")
             break
         elif select_book == "4":
-            print(f"You selected: {book_list.get('4.')}")
+            select_book = book_list.get('4.')
+            print(f"You selected: {select_book}")
             break
         elif select_book == "5":
-            print(f"You selected: {book_list.get('5.')}")
+            select_book = book_list.get('5.')
+            print(f"You selected: {select_book}")
             break
         elif select_book == "6":
-            print(f"You selected: {book_list.get('6.')}")
+            select_book = book_list.get('6.')
+            print(f"You selected: {select_book}")
             break
         elif select_book == "7":
-            print(f"You selected: {book_list.get('7.')}")
+            select_book = book_list.get('7.')
+            print(f"You selected: {select_book}")
             break
         elif select_book == "8":
-            print(f"You selected: {book_list.get('8.')}")
+            select_book = book_list.get('8.')
+            print(f"You selected: {select_book}")
             break
         else:
             print("No worries. Have a lovely day :)")
@@ -125,7 +134,7 @@ def print_receipt():
     )
     print("And here is your receipt:")
     print("----------------------------")
-    print()
+    print(f"You ordered: {select_book}")
     
 
 
@@ -134,9 +143,10 @@ def main():
     Main function, which includes
     all functions to run the program
     """
-    enter_or_exit()
+ #   enter_or_exit()
     order_book()
     user_data()
+    print_receipt()
 
 
 main()
