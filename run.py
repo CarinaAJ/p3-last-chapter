@@ -15,9 +15,9 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('last_chapter_orders')
 
-orders = SHEET.worksheet('book_orders')
-data = orders.get_all_values()
-print(data)
+#orders = SHEET.worksheet('book_orders')
+#data = orders.get_all_values()
+#print(data)
 
 
 book_list = {
@@ -48,8 +48,8 @@ def enter_or_exit():
         if (decision_user == "Y" or decision_user == "y"):
             print("Amazing! Let me load the list for you........\n")
             time.sleep(1)
-            for key in book_list:
-                print(key, book_list[key])
+            for index_list, title in book_list.items():
+                print(index_list, title)
             break
         else:
             print("No worries. Thanks for stopping by!\U0001F44B")
@@ -144,8 +144,6 @@ def user_data():
             print("Just enter them again to correct them.")
             print()
 
-    return (fname, lname, mnumber)
-
 
 def validate_number(numbers):
     """"
@@ -163,17 +161,15 @@ def validate_number(numbers):
 
     return True
 
+
 # might not need this here and can update in user_data() function directly? 
-def update_sheet(cust_data):
+def update_sheet():
     """"
     Function to update the Google Sheet
     with the user's details without 
     displaying it in the programme
     """
-    #data = SHEET.worksheet("book_orders")
-    #data.row = stock[-1]
     pass
-    
 
 
 def print_receipt():
@@ -199,6 +195,7 @@ def print_receipt():
     now = datetime.now()
     date_format = now.strftime("%d.%m.%Y %H:%M:%S")
     print(date_format)
+    print("..........................................")
     print()
 
 
