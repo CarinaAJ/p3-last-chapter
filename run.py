@@ -1,6 +1,23 @@
 import time
 from datetime import datetime
 import sys
+import gspread
+from google.oauth2.service_account import Credentials
+
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive"
+    ]
+
+CREDS = Credentials.from_service_account_file('creds.json')
+SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+SHEET = GSPREAD_CLIENT.open('last_chapter_orders')
+
+orders = SHEET.worksheet('book_orders')
+data = orders.get_all_values()
+print(data)
 
 book_list = {
     "1.": "Rumo - W.Moers, £20",
@@ -189,17 +206,17 @@ def main():
     print_receipt()
 
 
-while True:
-    main()
-    print(
-        """If you want to place another order """
-        """enter Y. If not enter N."""
-    )
-    stay_or_leave = input("Please choose now: ")
-    stay_or_leave = stay_or_leave.strip()
-    if stay_or_leave == "Y" or stay_or_leave == "y":
-        continue
-    else:
-        print()
-        print("See you next time. Have a lovely day \U0001F642")
-        break
+#while True:
+ #   main()
+  #  print(
+     #   """If you want to place another order """
+    #    """enter Y. If not enter N."""
+   # )
+    #stay_or_leave = input("Please choose now: ")
+    #stay_or_leave = stay_or_leave.strip()
+    #if stay_or_leave == "Y" or stay_or_leave == "y":
+     #   continue
+    #else:
+     #   print()
+      #  print("See you next time. Have a lovely day \U0001F642")
+       # break
