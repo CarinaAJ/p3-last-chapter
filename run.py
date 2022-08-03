@@ -1,4 +1,5 @@
 import time 
+from datetime import datetime
 import sys
 
 book_list = {
@@ -134,6 +135,10 @@ def print_receipt():
     )
     print("And here is your receipt:")
     print("----------------------------")
+    now = datetime.now()
+    print()
+    date_format = now.strftime("%d.%m.%Y %H:%M:S")
+    print(date_format)
     print(f"You ordered: {select_book}")
     
 
@@ -145,7 +150,7 @@ def main():
     """
  #   enter_or_exit()
     order_book()
-    user_data()
+    
     print_receipt()
 
 
