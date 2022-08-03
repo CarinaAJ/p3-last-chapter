@@ -1,6 +1,5 @@
-import time 
+import time
 from datetime import datetime
-
 import sys
 
 book_list = {
@@ -14,14 +13,14 @@ book_list = {
     "8.": "The Book Thief - M.Zusak, £8.99",
 }
 
-#final function
+# function complete 
 def enter_or_exit():
     """"
     Function to either continue to browse
     or exit
     """
     while True:
-        print("Hello and welcome to The Last Chapter! \U0001F4DA")  
+        print("Hello and welcome to The Last Chapter! \U0001F4DA")
         decision_user = input(
             """Do you want to see some books? """
             """Enter Y to see our selection """
@@ -29,7 +28,7 @@ def enter_or_exit():
         )
         decision_user = decision_user.strip()
         if (decision_user == "Y" or decision_user == "y"):
-            print("Amazing! Let me load the list for you........\n") 
+            print("Amazing! Let me load the list for you........\n")
             time.sleep(1)
             for key in book_list:
                 print(key, book_list[key])
@@ -38,26 +37,25 @@ def enter_or_exit():
             print("No worries. Thanks for stopping by!\U0001F44B")
             sys.exit()
 
-
-#good function to use try and except to catch validation error
+# function complete
 def order_book():
     """"
-    Function to select a book
+    Function to select a book or leave shop
     """
     while True:
         print(
             """If you wish to place an order, please """
             """enter the number of the title you wish """
-            """to order (i.e. 1 for the first title """
-            """2 for the second title etc.). \n\nIf there """
-            """is nothing in our shop for you today don't worry. """
-            """Press any other key to leave the shop :)"""
+            """to order (i.e. 1 for 'Rumo' """
+            """2 for 'The Sober Diaries' etc.). \n\nIf there """
+            """is nothing in our shop for you today don't worry.\n"""
+            """Press any other key to leave the shop \U0001F642"""
         )
         print()
         global select_book
         select_book = input("Enter the number now: ")
         select_book = select_book.strip()
-        if select_book == "1": 
+        if select_book == "1":
             select_book = book_list.get('1.')
             print(f"You selected: {select_book}")
             break
@@ -90,8 +88,9 @@ def order_book():
             print(f"You selected: {select_book}")
             break
         else:
-            print("No worries. Have a lovely day :)")
+            print("No worries. Have a lovely day \U0001F44B")
             sys.exit()
+
 
 
 # works but also need to validate user input
@@ -103,19 +102,21 @@ def user_data():
         print("Great. Let me now grab your details.")
         fname = input("Please enter your first name: ")
         lname = input("Please enter your last name: ")
-        mobile = int(input("Please enter your mobile number: "))
+        mnumber = input("Please enter your mobile number: ")
         print("Perfect. These are your details:\n")
-        print(f"First name: {fname}\nLast name: {lname}\nPhone: {mobile}")
+        print(f"First name: {fname}\nLast name: {lname}\nPhone: {mnumber}")
         print()
         print("If your details are correct enter 1 and 2 if not")
         check_details = input("Please enter now: ")
         if check_details == "1":
             print("Super! Let's finish your order then.")
-            break            
+            break
         else:
             print("No worries. Let's fix it!")
             print("Just enter them again to correct them.")
-            
+            print()
+
+user_data()
 
 def update_sheet():
     """"
@@ -139,12 +140,21 @@ def print_receipt():
     print("----------------------------")
     now = datetime.now()
     print()
-    date_format = now.strftime("%d.%m.%Y %H:%M:S")
+    date_format = now.strftime("%d.%m.%Y %H:%M:%S")
     print(date_format)
     print(f"You ordered: {select_book}")
+    print("We'll notify you once it is ready to collect.")
+    print("Have a lovely day \U0001F642")
     
 
-#def validate_input():
+def validate_mnumber():
+    """"
+    Validate user input and asks to
+    try again if criteria is not met
+    """
+
+
+
 
 
 def main():
@@ -152,10 +162,5 @@ def main():
     Main function, which includes
     all functions to run the program
     """
-    enter_or_exit()
- #   order_book()
-    
-    
+    pass
 
-
-main()
