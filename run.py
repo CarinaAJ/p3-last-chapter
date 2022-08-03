@@ -1,5 +1,6 @@
 import time 
 from datetime import datetime
+
 import sys
 
 book_list = {
@@ -13,15 +14,14 @@ book_list = {
     "8.": "The Book Thief - M.Zusak, £8.99",
 }
 
-
+#final function
 def enter_or_exit():
     """"
     Function to either continue to browse
     or exit
     """
     while True:
-        print("Hello and welcome to The Last Chapter!")
-# add print statement with nicely formatted logo        
+        print("Hello and welcome to The Last Chapter! \U0001F4DA")  
         decision_user = input(
             """Do you want to see some books? """
             """Enter Y to see our selection """
@@ -29,12 +29,13 @@ def enter_or_exit():
         )
         decision_user = decision_user.strip()
         if (decision_user == "Y" or decision_user == "y"):
-            print("Amazing! This is our list: \n")
+            print("Amazing! Let me load the list for you........\n") 
+            time.sleep(1)
             for key in book_list:
                 print(key, book_list[key])
             break
         else:
-            print("No worries. Thanks for stopping by!\n")
+            print("No worries. Thanks for stopping by!\U0001F44B")
             sys.exit()
 
 
@@ -48,14 +49,15 @@ def order_book():
             """If you wish to place an order, please """
             """enter the number of the title you wish """
             """to order (i.e. 1 for the first title """
-            """2 for the second title etc.). If there """
+            """2 for the second title etc.). \n\nIf there """
             """is nothing in our shop for you today don't worry. """
-            """Press any other key to exit :)"""
+            """Press any other key to leave the shop :)"""
         )
         print()
         global select_book
         select_book = input("Enter the number now: ")
-        if select_book == "1":
+        select_book = select_book.strip()
+        if select_book == "1": 
             select_book = book_list.get('1.')
             print(f"You selected: {select_book}")
             break
@@ -142,16 +144,18 @@ def print_receipt():
     print(f"You ordered: {select_book}")
     
 
+#def validate_input():
+
 
 def main():
     """"
     Main function, which includes
     all functions to run the program
     """
- #   enter_or_exit()
-    order_book()
+    enter_or_exit()
+ #   order_book()
     
-    print_receipt()
+    
 
 
 main()
