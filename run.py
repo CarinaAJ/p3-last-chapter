@@ -19,6 +19,7 @@ orders = SHEET.worksheet('book_orders')
 data = orders.get_all_values()
 print(data)
 
+
 book_list = {
     "1.": "Rumo - W.Moers, £20",
     "2.": "The Sober Diaries - C.Pooley, £9.99",
@@ -143,6 +144,8 @@ def user_data():
             print("Just enter them again to correct them.")
             print()
 
+    return (fname, lname, mnumber)
+
 
 def validate_number(numbers):
     """"
@@ -160,13 +163,17 @@ def validate_number(numbers):
 
     return True
 
-
-def update_sheet():
+# might not need this here and can update in user_data() function directly? 
+def update_sheet(cust_data):
     """"
     Function to update the Google Sheet
-    with the user's details
+    with the user's details without 
+    displaying it in the programme
     """
+    #data = SHEET.worksheet("book_orders")
+    #data.row = stock[-1]
     pass
+    
 
 
 def print_receipt():
@@ -206,17 +213,17 @@ def main():
     print_receipt()
 
 
-#while True:
- #   main()
-  #  print(
-     #   """If you want to place another order """
-    #    """enter Y. If not enter N."""
-   # )
-    #stay_or_leave = input("Please choose now: ")
-    #stay_or_leave = stay_or_leave.strip()
-    #if stay_or_leave == "Y" or stay_or_leave == "y":
-     #   continue
-    #else:
-     #   print()
-      #  print("See you next time. Have a lovely day \U0001F642")
-       # break
+while True:
+    main()
+    print(
+        """If you want to place another order """
+        """enter Y. If not enter N."""
+    )
+    stay_or_leave = input("Please choose now: ")
+    stay_or_leave = stay_or_leave.strip()
+    if stay_or_leave == "Y" or stay_or_leave == "y":
+        continue
+    else:
+        print()
+        print("See you next time. Have a lovely day \U0001F642")
+        break
