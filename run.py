@@ -13,6 +13,7 @@ book_list = {
     "8.": "The Book Thief - M.Zusak, £8.99",
 }
 
+
 # function complete 
 def enter_or_exit():
     """"
@@ -43,6 +44,7 @@ def order_book():
     Function to select a book or leave shop
     """
     while True:
+        print()
         print(
             """If you wish to place an order, please """
             """enter the number of the title you wish """
@@ -98,7 +100,9 @@ def user_data():
     Function to take and check user's details
     """
     while True:
+        print()
         print("Let me now grab your details now.")
+        time.sleep(0.5)
         fname = input("Please enter your first name: ")
         lname = input("Please enter your last name: ")
         mnumber = input("Please enter your mobile number: ")
@@ -112,6 +116,8 @@ def user_data():
         check_details = input("Please enter now: ")
         if check_details == "1":
             print("Super! Let's finish your order then.")
+            print("..........................................")
+            time.sleep(2)
             break
         else:
             print("No worries. Let's fix it!")
@@ -149,37 +155,49 @@ def print_receipt():
     Function to print the receipt
     """
     print(
-        """Thank you for supporting your local bookshop! """
+        """Thank you for supporting your local bookshop!\n"""
         """Your order will be ready to collect """
-        """within the next 1 - 3 working days. """
+        """within the next 1 - 3 working days.\n"""
         """But we'll send you a text message when it is ready."""
     )
-    print("And here is your receipt:")
-    print("----------------------------")
-    now = datetime.now()
     print()
+    print("And here is your receipt:")
+    time.sleep(2)
+    print("..........................................")
+    print("The Last Chapter")
+    print("Bookstore Lane 42")
+    print("123 ABC London")
+    print()
+    print(f"You ordered: {select_book}")
+    print()
+    now = datetime.now()
     date_format = now.strftime("%d.%m.%Y %H:%M:%S")
     print(date_format)
-    print(f"You ordered: {select_book}")
-    print("We'll notify you once it is ready to collect.")
-    print("Have a lovely day \U0001F642")
+    print()
     
-
-def validate_mnumber():
-    """"
-    Validate mobile number and asks to
-    try again if criteria is not met
-    """
-
-
-
-
 
 def main():
     """"
     Main function, which includes
     all functions to run the program
     """
+    enter_or_exit()
+    order_book()
     user_data()
+    print_receipt()
 
-main()
+
+while True:
+    main()
+    print(
+        """If you want to place another order """
+        """enter Y. If not enter N."""
+    )
+    stay_or_leave = input("Please choose now: ")
+    stay_or_leave = stay_or_leave.strip()
+    if stay_or_leave == "Y" or stay_or_leave == "y":
+        continue
+    else:
+        print()
+        print("See you next time. Have a lovely day \U0001F642")
+        break
