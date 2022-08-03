@@ -92,18 +92,20 @@ def order_book():
             sys.exit()
 
 
-
-# works but also need to validate user input
+# works but need to validate mobile number
 def user_data():
     """"
     Function to take and check user's details
     """
     while True:
-        print("Great. Let me now grab your details.")
+        print("Let me now grab your details now.")
         fname = input("Please enter your first name: ")
         lname = input("Please enter your last name: ")
         mnumber = input("Please enter your mobile number: ")
-        print("Perfect. These are your details:\n")
+        if validate_number(mnumber):
+            print("Perfect. These are your details:\n")
+        else:
+            continue
         print(f"First name: {fname}\nLast name: {lname}\nPhone: {mnumber}")
         print()
         print("If your details are correct enter 1 and 2 if not")
@@ -116,7 +118,23 @@ def user_data():
             print("Just enter them again to correct them.")
             print()
 
-user_data()
+
+def validate_number(numbers):
+    """"
+    Validate mobile number
+    """
+    try:
+        if len(numbers) != 11:
+            raise ValueError
+            
+    except ValueError:
+        print("\nWhoops! Please make sure you enter 11 digits.")
+        print("Let's just try this again \U0001F642")
+        print()
+        return False
+    
+    return True
+
 
 def update_sheet():
     """"
@@ -149,7 +167,7 @@ def print_receipt():
 
 def validate_mnumber():
     """"
-    Validate user input and asks to
+    Validate mobile number and asks to
     try again if criteria is not met
     """
 
@@ -162,5 +180,6 @@ def main():
     Main function, which includes
     all functions to run the program
     """
-    pass
+    user_data()
 
+main()
