@@ -14,7 +14,6 @@ book_list = {
 }
 
 
-# function complete 
 def enter_or_exit():
     """"
     Function to either continue to browse
@@ -38,7 +37,7 @@ def enter_or_exit():
             print("No worries. Thanks for stopping by!\U0001F44B")
             sys.exit()
 
-# function complete
+
 def order_book():
     """"
     Function to select a book or leave shop
@@ -94,7 +93,6 @@ def order_book():
             sys.exit()
 
 
-# works but need to validate mobile number
 def user_data():
     """"
     Function to take and check user's details
@@ -132,13 +130,13 @@ def validate_number(numbers):
     try:
         if len(numbers) != 11:
             raise ValueError
-            
+
     except ValueError:
         print("\nWhoops! Please make sure you enter 11 digits.")
         print("Let's just try this again \U0001F642")
         print()
         return False
-    
+
     return True
 
 
@@ -174,7 +172,7 @@ def print_receipt():
     date_format = now.strftime("%d.%m.%Y %H:%M:%S")
     print(date_format)
     print()
-    
+
 
 def main():
     """"
