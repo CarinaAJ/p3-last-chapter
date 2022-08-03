@@ -102,8 +102,11 @@ def user_data():
         print("Let me now grab your details now.")
         time.sleep(0.5)
         fname = input("Please enter your first name: ")
+        fname = fname.strip()
         lname = input("Please enter your last name: ")
+        lname = lname.strip()
         mnumber = input("Please enter your mobile number: ")
+        mnumber = mnumber.strip()
         if validate_number(mnumber):
             print("Perfect. These are your details:\n")
         else:
@@ -112,6 +115,7 @@ def user_data():
         print()
         print("If your details are correct enter 1 and 2 if not")
         check_details = input("Please enter now: ")
+        check_details = check_details.strip()
         if check_details == "1":
             print("Super! Let's finish your order then.")
             print("..........................................")
