@@ -73,35 +73,35 @@ def order_book():
         select_book = select_book.strip()
         if select_book == "1":
             select_book = book_list.get('1.')
-            print(f"You selected: {select_book}")
+            print(f"You selected: {select_book} \U0001F4D5")
             break
         elif select_book == "2":
             select_book = book_list.get('2.')
-            print(f"You selected: {select_book}")
+            print(f"You selected: {select_book} \U0001F4D4")
             break
         elif select_book == "3":
             select_book = book_list.get('3.')
-            print(f"You selected: {select_book}")
+            print(f"You selected: {select_book} \U0001F4D6")
             break
         elif select_book == "4":
             select_book = book_list.get('4.')
-            print(f"You selected: {select_book}")
+            print(f"You selected: {select_book} \U0001F4D7")
             break
         elif select_book == "5":
             select_book = book_list.get('5.')
-            print(f"You selected: {select_book}")
+            print(f"You selected: {select_book} \U0001F4D8")
             break
         elif select_book == "6":
             select_book = book_list.get('6.')
-            print(f"You selected: {select_book}")
+            print(f"You selected: {select_book} \U0001F4D9")
             break
         elif select_book == "7":
             select_book = book_list.get('7.')
-            print(f"You selected: {select_book}")
+            print(f"You selected: {select_book} \U0001F4D4")
             break
         elif select_book == "8":
             select_book = book_list.get('8.')
-            print(f"You selected: {select_book}")
+            print(f"You selected: {select_book} \U0001F4D6")
             break
         else:
             print("No worries. Have a lovely day \U0001F44B")
@@ -114,7 +114,7 @@ def user_data():
     """
     while True:
         print()
-        print("Let me now grab your details now.")
+        print("Let me now grab your details now \U0001F58A")
         print()
         time.sleep(0.5)
         fname = input("Please enter your first name: ")
@@ -133,7 +133,7 @@ def user_data():
         check_details = input("Please enter now: ")
         check_details = check_details.strip()
         if check_details == "1":
-            print("Super! Let's finish your order then.")
+            print("Alright! \U0001F44D Let's finish your order \U0001F642")
             print("..........................................")
             time.sleep(2)
             break
@@ -154,7 +154,7 @@ def validate_number(numbers):
             raise ValueError
 
     except ValueError:
-        print("\nWhoops! Please make sure you enter 11 digits.")
+        print("\nWhoops!\U0001F914 Please make sure you enter 11 digits.")
         print("Let's just try this again \U0001F642")
         print()
         return False
@@ -177,20 +177,20 @@ def print_receipt():
     Function to print the receipt
     """
     print(
-        """Thank you for supporting your local bookshop!\n"""
+        """Thank you for supporting your local bookshop! \U0001F917\n"""
         """Your order will be ready to collect """
         """within the next 1 - 3 working days.\n"""
-        """But we'll send you a text message when it is ready."""
+        """But we'll send you a text message when it is ready \U0001F4F2"""
     )
     print()
-    print("And here is your receipt:")
+    print("And here is your receipt \U0001F9FE:")
     time.sleep(2)
     print("..........................................")
     print("The Last Chapter")
     print("Bookstore Lane 42")
     print("123 ABC London")
     print()
-    print(f"You ordered: {select_book}")
+    print(f"You ordered: {select_book} \U0001F4D6")
     print()
     now = datetime.now()
     date_format = now.strftime("%d.%m.%Y %H:%M:%S")
