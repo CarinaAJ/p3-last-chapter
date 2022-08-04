@@ -107,6 +107,7 @@ def order_book():
             print("No worries. Have a lovely day \U0001F44B")
             sys.exit()
 
+    return select_book
 
 def user_data():
     """"
@@ -162,14 +163,14 @@ def validate_number(numbers):
     return True
 
 
-def update_sheet(name1, name2, number, worksheet):
+def update_sheet(name1, name2, number, title, worksheet):
     """"
     Function to update the Google Sheet
     with the user's details withou
     displaying it in the programme
     """
     add_data = SHEET.worksheet(worksheet)
-    add_data.append_row([name1, name2, number])
+    add_data.append_row([name1, name2, number, title])
 
 
 def print_receipt():
@@ -205,9 +206,9 @@ def main():
     all functions to run the program
     """
     enter_or_exit()
-    order_book()
+    select_book = order_book()
     fname, lname, mnumber = user_data()
-    update_sheet(fname, lname, mnumber, "book_orders")
+    update_sheet(fname, lname, mnumber, select_book, "book_orders")
     print_receipt()
 
 
