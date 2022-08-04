@@ -15,10 +15,6 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('last_chapter_orders')
 
-#orders = SHEET.worksheet('book_orders')
-#data = orders.get_all_values()
-#print(data)
-
 
 book_list = {
     "1.": "Rumo - W.Moers, £20",
@@ -123,7 +119,7 @@ def user_data():
         fname = fname.strip()
         lname = input("Please enter your last name: ")
         lname = lname.strip()
-        mnumber = input("Please enter your mobile number: ")
+        mnumber = input("Please enter your UK mobile number: ")
         mnumber = mnumber.strip()
         if validate_number(mnumber):
             print("Perfect. These are your details:\n")
@@ -144,6 +140,8 @@ def user_data():
             print("Just enter them again to correct them.")
             print()
 
+    return fname, lname, mnumber
+
 
 def validate_number(numbers):
     """"
@@ -162,14 +160,14 @@ def validate_number(numbers):
     return True
 
 
-# might not need this here and can update in user_data() function directly? 
-def update_sheet():
+def update_sheet(name1, name2, number, worksheet):
     """"
     Function to update the Google Sheet
-    with the user's details without 
+    with the user's details withou
     displaying it in the programme
     """
-    pass
+    add_data = SHEET.worksheet(worksheet)
+    add_data.append_row([name1, name2, number])
 
 
 def print_receipt():
@@ -206,7 +204,8 @@ def main():
     """
     enter_or_exit()
     order_book()
-    user_data()
+    fname, lname, mnumber = user_data()
+    update_sheet(fname, lname, mnumber, "book_orders")
     print_receipt()
 
 
