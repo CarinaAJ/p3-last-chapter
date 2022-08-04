@@ -1,6 +1,7 @@
 import time
 from datetime import datetime
 import sys
+import pyfiglet
 import gspread
 from google.oauth2.service_account import Credentials
 
@@ -114,6 +115,7 @@ def user_data():
     while True:
         print()
         print("Let me now grab your details now.")
+        print()
         time.sleep(0.5)
         fname = input("Please enter your first name: ")
         fname = fname.strip()
@@ -210,6 +212,8 @@ def main():
 
 
 while True:
+    welcome_title = pyfiglet.figlet_format("The Last Chapter")
+    print(welcome_title)
     main()
     print(
         """If you want to place another order """
