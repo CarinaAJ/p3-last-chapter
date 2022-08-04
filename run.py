@@ -210,12 +210,12 @@ def main():
     select_book = order_book()
     print()
     print(
-        """-> Please note: for the purpose of this """
+        """(-> Please note: for the purpose of this """
         """project your name and number will be """
         """added to an external sheet so feel """
         """free to add fictional details if """
         """you prefer. No data will be shared """
-        """with anyone but me."""
+        """with anyone but me.)"""
 
     )
     time.sleep(5)
