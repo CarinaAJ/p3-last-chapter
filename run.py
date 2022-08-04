@@ -208,6 +208,18 @@ def main():
     """
     enter_or_exit()
     select_book = order_book()
+    print()
+    print(
+        """-> Please note: for the purpose of this """
+        """project your name and number will be """
+        """added to an external sheet so feel """
+        """free to add fictional details if """
+        """you prefer. No data will be shared """
+        """with anyone but me."""
+
+    )
+    time.sleep(5)
+    print()
     fname, lname, mnumber = user_data()
     update_sheet(fname, lname, mnumber, select_book, "book_orders")
     print_receipt()
