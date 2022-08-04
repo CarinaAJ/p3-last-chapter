@@ -32,7 +32,7 @@ book_list = {
 def enter_or_exit():
     """"
     Function to either continue to browse
-    or exit
+    or leave shop
     """
     while True:
         print("Hello and welcome to The Last Chapter! \U0001F4DA")
@@ -167,8 +167,8 @@ def validate_number(numbers):
 def update_sheet(name1, name2, number, title, worksheet):
     """"
     Function to update the Google Sheet
-    with the user's details withou
-    displaying it in the programme
+    with the user's details and selected title 
+    without displaying it in the programme
     """
     add_data = SHEET.worksheet(worksheet)
     add_data.append_row([name1, name2, number, title])
