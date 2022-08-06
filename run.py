@@ -43,7 +43,7 @@ def enter_or_exit():
         )
         decision_user = decision_user.strip()
         if (decision_user == "Y" or decision_user == "y"):
-            print("Amazing! Let me load the list for you........\n")
+            print("Amazing! Let me get the list for you........\n")
             time.sleep(1)
             for index_list, title in book_list.items():
                 print(index_list, title)
