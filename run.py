@@ -69,7 +69,7 @@ def order_book():
         )
         print()
         global select_book
-        select_book = input("Enter the number now: ")
+        select_book = input("Enter the number/other key now: ")
         select_book = select_book.strip()
         if select_book == "1":
             select_book = book_list.get('1.')
@@ -140,7 +140,7 @@ def user_data():
             time.sleep(2)
             break
         else:
-            print("No worries. Let's fix it!")
+            print("No worries. Let's fix it! \U0001F642")
             print("Just enter them again to correct them.")
             print()
 

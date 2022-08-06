@@ -3,15 +3,19 @@
 ## A website to browse and order books
 
 ![Landing Page](readme-assets/landing-page.png)
+
 --------------------------------------
 
 ## Table of Contents
+
 --------------------------------------
+
 
 - [Description](#description)
 - [Theme](#theme)
 - [Objective](#objective)
 - [Features](#features)
+    - [Future Features](#future-features)
 - [Testing](#testing)
 - [Technologies](#technologies)
 - [Deployment](#cloning)
@@ -26,13 +30,16 @@
 
 As an avid reader, I wanted to create a little bookshop and allow the user to browse and have a look at the available titles and order a book if he wishes. 
 
+
 -----------------------------------------
 
 ## Theme
+
 -----------------------------------------
 Despite the project being entirely text-based, I implemented a few little things to make it more user-friendly. When the user enters the site, he will be greeted with a big heading and the name of the bookshop, ‘The Last Chapter’. Furthermore, I added emojis throughout the entire programme where appropriate and added slight delays for various reasons. An explanation follows where the sleep function has been used.
 
 ![Bookshop Name](readme-assets/theme-last-chapter.png)
+
 
 -----
 
@@ -81,9 +88,9 @@ If the user changes his mind, he can leave the shop by entering N.
 ------------------------------
 ### See Selection/second decision
 
-If the user decides to have a look, a list of books will be printed and displayed. To create anticiptation , the .sleep() function has been implemented with a delay of 1 second.
+If the user decides to have a look, a list of books will be printed and displayed. To create anticiptation , the .sleep() function has been implemented with a delay of 1 second to display the titles.
 
-![Book List](readme-assets/second-choice.png)
+![Book List](readme-assets/book-list.png)
 
 ----------------
 #### Leave Shop 
@@ -93,38 +100,66 @@ If the user decides to not go ahead and order a book, he can enter any other key
 ![Second Choice - Leave Shop](readme-assets/second-choice-exit.png)
 
 -----------------
-### Colored text
+### Select Book
 
-  Colored text was achieved using colorama, a python library.
+If the user wishes to order a book, he is asked to enter a number between 1 and 8 to choose the desired title. 
 
-![Colored-text](./docs/colored-text.png)
+![Second Choice - Select Title](readme-assets/second-choice-continue.png)
 
 -------------------
-### Games
+### User Information
 
-  Two games are available for the user to play,
-  neither are mandatory but both are possible in one 
-  pass through the story.
+As this project has been linked to a Google Sheet, I added a small paragraph to inform the user that the data will be added to this Sheet but confirm that the data will only be collected for the purpose of this project and only be seen by me. I added a 5 second delay to allow the user enough time to read this message before the programme continues.
 
-  These are a fishing game and russian roulette, both are games of chance.
-
-![russian-roulette](./docs/Russian-roulette.png)
-![fishing](./docs/Fishing-game.png)
+![User Information](readme-assets/user-information.png)
 
 ------------------
-### Game Over 
+### Enter details
 
-  Multiple game over screens, One after completing/quitting without dying and one after you die. 
+The user is now asked to enter the first and last name and his UK mobile number.
+
+![Details](readme-assets/enter-details.png)
+
+### Enter Details - incorrect mobile number
+
+If the user doesn't enter a valid 11-digit UK number, a message pops up and informs him that it is incorrect. He can then enter the details again. Until the user enters an 11-digit number, the programme loops through it again and again.
+
+![Wrong mobile number](readme-assets/enter-details-incorrect-number.png)
+
+### Confirm or correct details
+
+After entering all his details, the user can then read over them again and either confirm the details by entering the digit 1 or enter the number 2 if he made a mistake somewhere.
+
+![Confirm Details - No](readme-assets/confirm-details-no.png)
+
+If he confirms his choice a message appears and letting the user know we can finish up this order now.
+
+![Confirm Details - Yes](readme-assets/confirm-details-yes.png)
+
+## Confirmed Details & Google Sheet
+
+Once the user has confirmed his details, they are simultaneously added to the Google Sheet.
+
+![Update Google Sheet](readme-assets/confirm-details-add-to-sheet.png)
 
 
-![game-over-1](./docs/Game-over-alive.png)
-![game-over-2](./docs/Game-over-dead.png)
+### Thank you & Receipt
+
+At this stage the user is being thanked for supporting his local bookshop and a small receipt will be printed. Another delay of 2 second has been added before the receipt has been 'printed'. On this receipt the user will find the address of the shop, the title and price of the book he ordered and the date and time.
+
+![Thanks & Receipt](readme-assets/receipt.png)
+
+## Last choice
+
+The user is now being asked if he wishes to place an other order or leave the shop. If he wishes to leave he is asked to enter N and a goodbye message pops up and the programme ends.
+
+![Leave Shop](readme-assets/last-choice-exit.png)
 
 
-[Back to the Top](#table-of-contents)
+If he wishes to place an other order he is asked to enter Y and the programme starts again from the begining.
 
+![Order another book](readme-assets/last-choice-new-start.png)
 
------
 ## Future Implementation 
 --------------------------
   Given the time I would like to rework the story and make it much bigger.
