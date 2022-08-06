@@ -160,13 +160,13 @@ If he wishes to place an other order he is asked to enter Y and the programme st
 
 ![Order another book](readme-assets/last-choice-new-start.png)
 
-## Future Implementation 
+## Future Features
 --------------------------
-  Given the time I would like to rework the story and make it much bigger.
-  Extra narrative, more games, possibly a black jack game.
-  I would very much like to have the background image change as the user progresses through
-  the story, from jungle scene to boat to saloon to plantation among others.
-  This is beyond my abilities at the moment and not needed for this project.
+
+- To migrate the booklist to a Google sheet and pull out the titles from there for a wider selection
+- To give the user the option to enter an email address instead/addition off a phone number
+- To allow the user to order multiple books at the same time
+
 
 [Back to the Top](#table-of-contents)
 
@@ -175,43 +175,19 @@ If he wishes to place an other order he is asked to enter Y and the programme st
 ## Technologies Used 
 ---------------------
 
-- [HTML5](https://en.wikipedia.org/wiki/HTML5)
-- [CSS3](https://en.wikipedia.org/wiki/CSS)
-- [Python](https://www.python.org/) 
-- [GitPod](https://www.gitpod.io/)
-- [GitHub](https://github.com/)
-- [GitBash](https://www.atlassian.com/git/tutorials/git-bash#:~:text=What%20is%20Git%20Bash%3F,operating%20system%20through%20written%20commands.)
-- [Heroku](https://id.heroku.com/login)
-- [vsCode](https://code.visualstudio.com/)
-- [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/)
-- [Markdown](https://markdown-guide.readthedocs.io/en/latest/)
-- [Draw.io](https://drawio-app.com/)
-- [a11y](https://color.a11y.com/Contrast/) 
+- Python, to write my code
+- Heroku, to deploy my site
 
-
------
-## Resources 
-----------------
-
-- [Code Institute](https://codeinstitute.net/ie/)
-- [Slack](https://slack.com/intl/en-ie/) 
-- [Stack OverFlow](https://stackoverflow.com)
-- [YouTube](https://www.youtube.com/)
-- [Udemy](https://www.udemy.com/)
-- [FreeCodeCamp](https://www.freecodecamp.org/)
-- [W3Schools.com](https://www.w3schools.com/)
-- [MDN Web Docs](https://developer.mozilla.org/en-US/)
-
+-----------------------------
 
 ## Python Libraries/Modules
 ---------------------------
 
-- [Colorama](https://pypi.org/project/colorama/)
-- [Random](https://www.cs.swarthmore.edu/~adanner/cs21/f09/randomlib.php#:~:text=Using%20the%20random%20library&text=The%20random%20module%20provides%20access,the%20basic%20features%20of%20python.)
-- [Time](https://docs.python.org/3/library/time.html)
-- [os](https://www.geeksforgeeks.org/os-module-python-examples/#:~:text=The%20OS%20module%20in%20Python,*os*%20and%20*os.)
-- [sys](https://www.geeksforgeeks.org/python-sys-module/)
-
+- Time - to add the .sleep() function and delay my code in the terminal
+- [Datetime](https://www.programiz.com/python-programming/datetime/strftime) - to print the current date and time on the receipt
+- [Sys](https://www.hashbangcode.com/article/stopping-code-execution-python) - to exit the programme
+- [Pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/) - to create a header    for the bookshop,
+- Gspread - as API for my Google Sheet
 
 [Back to the Top](#table-of-contents)
 
@@ -220,50 +196,7 @@ If he wishes to place an other order he is asked to enter Y and the programme st
 ## Testing
 -------------
 
-### User Testing
------------------
-
-The website was sent to a group of approximately 10 people. They found the game easy to work through and enjoyable.
-For the most part this only discovered spelling and grammar errors.
-
-Also the project was posted into the 'peer-code-review' channel on slack and no bugs or issues were reported.
-
-
-### Manual Testing
---------------------
-
-I carried out manual testing to ensure that game flow was correct, everything was working as it should and validation caught any errors. 
-
-- Tests carried out: 
-  - Home screen - Verify that: 
-    - The title displays.
-    - The intro quote is printed.
-    - The user is prompted for their name.
-    - The user can enter their name.
-    - The user gets a warning message if the name is longer than 50 characters. 
-    - The user gets a warning message if the name is blank. 
-
-  - How to screen - Verify that: 
-    - The introduction narrative prints.
-    - The how to play instructions are printed. 
-    - That the user is asked to enter "y" or "n" to begin.  
-
-  - Regular narrative and choices - Verify that:
-    - The story begins and offers the user the choice to choose their path.
-    - That the story progresses as the user wishes. 
-    - That a warning message appears if anything other than the available choices is entered.  
-
-  - Menu - Verify that: 
-    - The menu is available from any of the forks in the path.
-    - That the menu works properly, all inputs are correctly validated, warning messages appear and are clear. 
-
-  - Games - Verify that: 
-    - If the user chooses to play a game, the correct game is loaded. 
-    - That the game plays as intended without any errors. 
-    - That any variables altered during the game are accessible later for the correct purposes.
-
-  - Ascii Art - Verify that:
-    - All ascii art is displayed as intended and the color is correct.
+The site has been tested by me thouroughly during the creation to ensure that the programme runs like it should and errors are being caught.
 
 
 [Back to the Top](#table-of-contents)
@@ -272,58 +205,19 @@ I carried out manual testing to ensure that game flow was correct, everything wa
 ### Browser Testing
 -----------------------
 
-The Website has been tested on Google Chrome, Microsoft Edge, and Firefox. On all browsers testing was as expected.  
-
-![microsoft-edge](./docs/microsoft-edge.png)
-
--------------------------------------------
-![firefox](./docs/firefox.png)
-
--------------------------------------------
-![chrome](./docs/chrome.png)
-
+The programme has been tested on Google Chrome, Firefox and Safari without any issues. Due to the nature of the programme, it is not suitable for mobile phones and smaller devices.
 
 
 ### Validators 
 ----------------------
 
-The six python files were tested using [Pep8 Validation](http://pep8online.com/checkresult). 
+The code has been tested by running it through the PeP8. Almost all of the errors which have been encountered were due to trailing whitespaces or either too many or not enough blank lines.
 
-No errors were found.
+No errors were found during the final check.
 
-![run.py](./docs/run-pep.png)
-
------------------------------
-![functions.py](./docs/functions-pep.png)
+![PEP8](readme-assets/pep8-test-final.png)
 
 -----------------------------
-![menu.py](./docs/menu-pep.png)
-
------------------------------
-![games.py](./docs/games-pep.png)
-
------------------------------
-![narrative.py](./docs/narrative-pep.png)
-
------------------------------
-![ascii.py](./docs/ascii-pep.png)
-
------------------------------
-
-
-###  Result: Chrome Lighthouse
----------------------------------- 
-
-I used Chrome Lighthouse to test Performance on the website. 
-
-![lighthouse](./docs/lighthouse.png)
-
-
-### Color Contrast Testing 
------------------------------
-
-I used [a11y](https://https://color.a11y.com/) to test the color contrast on the website which produced no issues. 
-
 
 ### Issues/Bugs Fixed 
 -----------------------------
@@ -336,9 +230,7 @@ I used [a11y](https://https://color.a11y.com/) to test the color contrast on the
 [Back to the Top](#table-of-contents)
 
 
------
-## Version Control
-----------------------
+
 
 ### Git and GitHub 
 ----------------------
@@ -381,75 +273,24 @@ The website was deployed to heroku by doing the following:
 
 10. If successful you should be able to view your deployed app by clicking "View". 
     
-------------------------
-  ### Fork a Repository: 
---------------------------
-
-  A copy can be made of a repository by forking the repository.  The copy can then be viewed and changed without affecting the original repository. 
-  
-  - From your list of repositories select the repository you want to fork.
-  - On the top of the page to the right had side you will see a fork image.  Click on the button to create a copy. 
-
-
--------------------------
-  ### Clone a Repository:
-  ----------------------- 
-
-  Cloning this project from GitHub can be done by following these steps: 
-
-  - From your list of repositories select the repository you want to deploy.
-  - Click on the code tab. 
-  - Click on the clipboard icon to copy the URL.  
-  - Open Git Bash in your IDE. 
-  - Change the current working directory to the location you want to place the clone. 
-  - Type git clone and paste the copied URL.  
-  - Press enter for the clone to be created. 
-
-
-[Back to the Top](#table-of-contents)
-
 
 ## Credits 
 --------------------
 
-I have to credit Joseph Conrad, his book 'Heart of Darkness' gave me the idea and location for this story.
-
-I have only used one image for the background. this was sourced here: https://www.ambardcusa.org/congo_jungle_ctt/
-
-I sourced ascii_art from three places.
-- 1: http://www.patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
-
-  This site allowed me to input text and have it generated as ascii art.
-
-- 2: https://emojicombos.com
-
-  Library of emoji art.
-
-- 3: https://asciiart.website/index.php
-
-  Library of ascii art
-
-The quote on the home page is by Friedrich Nietzsche.
-
-A quick google search for how to clear the terminal gave me this command:
-```
-os.system('cls' if os.name == 'nt' else 'clear')
-``` 
-I incorporated this into the clear_terminal() function, it is used extensively to control the flow of text in the terminal.
-
-While researching for how to print the text character by character I found this code on stackoverflow:
-
-```
-for character in x:
-    sys.stdout.write(character)
-    sys.stdout.flush()
-    time.sleep()
-```
-I included this in the txt_effect() function.
-
-All of the rest of the code base and the story is my work.
-
-
+- [Stackoverflow](https://stackoverflow.com/questions/10660435/how-do-i-split-the-definition-of-a-long-string-over-multiple-lines) - for guidance on how to display long string
+- [Hashbangcode](https://www.hashbangcode.com/article/stopping-code-execution-python) - how to stop the programme
+- [MakeUseOf](https://www.makeuseof.com/how-to-include-emojis-in-your-python-code/) - for the syntax to add emojis
+- [W3 School](https://www.w3schools.com/python/gloss_python_loop_dictionary_items.asp) - to provide me with a better option to iterate through a dictionary than my original code 
+        * Original solution:
+    for key in book_list:
+                print(key, book_list[key])*
+        * Final version:
+    for index_list, title in book_list.items():
+                print(index_list, title)
+- [Python Basics](https://pythonbasics.org/multiple-return/) - guidane on how to return multiple variables from a function
+- [GeeksForGeeks](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/) - help on which module to import and how to create my header
+- [W3 School](https://www.w3schools.com/howto/howto_css_fixed_footer.asp) - how to fix my social icons to the footer
+- Love Sandwiches - for general guidance 
 
 [Back to the Top](#table-of-contents)
 
@@ -458,17 +299,6 @@ All of the rest of the code base and the story is my work.
 ## Acknowledegments
 ---------------------------
 
-I would like to acknowledge the help and support given by my mentor Chris Quinn, he is never short of good ideas. 
-All of the students in my own study group aswell as all the students in the wider Code Institute Slack channels. My cohort Facilitator [Kasia](https://github.com/bezebee) and all of the staff at Code Institute. The sense of comraderie among all of these individuals has helped me to feel at home on my journey to a new career in programming.
-
-
-[Back to the Top](#table-of-contents)
-
-## Author Info
---------------------
-
-- [GitHub](https://github.com/KSheridan86)
-- [Linkedin](https://www.linkedin.com/in/kensheridan86/)
 
 
 [Back to the Top](#table-of-contents)
