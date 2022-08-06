@@ -211,10 +211,10 @@ def main():
     print()
     print(
         """(-> Please note: for the purpose of this """
-        """project your name and number will be\n """
+        """project your name and number will be\n"""
         """added to an external sheet so feel """
         """free to add fictional details if """
-        """you prefer.\n No data will be shared """
+        """you prefer.\nNo data will be shared """
         """with anyone but me.)"""
 
     )
