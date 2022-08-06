@@ -13,15 +13,13 @@
 
 - [Description](#description)
 - [Theme](#theme)
-- [Objective](#objective)
+- [User Experience](#user-experience)
 - [Features](#features)
     - [Future Features](#future-features)
 - [Testing](#testing)
 - [Technologies](#technologies)
 - [Deployment](#cloning)
 - [Credits](#credits)
-- [Acknowledgements](#acknowledgements)
-- [Author Info](#author-info)
 
 ------
 
@@ -192,23 +190,26 @@ If he wishes to place an other order he is asked to enter Y and the programme st
 [Back to the Top](#table-of-contents)
 
 
------
-## Testing
--------------
+--------------------------------------
+## Testing & Issues Encountered
+--------------------------------------
 
 The site has been tested by me thouroughly during the creation to ensure that the programme runs like it should and errors are being caught.
 
+I had a lot of fun creating my little bookshop and enjoyed it thouroughly. Nevertheless did I enconter a few issues during the creation: 
+
+1) At first I only had one break statement in my order_book() function, so every time I ran the programme it jumped back to the beginning instead of going ahead to the user_data() function. I had it working before, but only because I entered by chance the only number that had the break statement included. After having posted my question in the Slack Channel, I saw my issue a couple of minutes later and entered a break statement after each choice. This fixed my problem.
+
+2) When printing the receipt I wanted to display the choice the user made together with a few extra information but kept running into error messages. After reading over the Code Institute material over and over again I found a simple solution and made my select_book variable to a global variable. This allowed me to show the title the user has selected on the receipt succesfully.
+
+3) My biggest issue however was to add the customer's details to my Google Sheet. I tried endless variations and looked at the love sandwich project for guidance as well as other similar projects. Unfortunately none of them helped me finding the answer, because unlike them I wanted to add three variables (fname, lname and mnumber) from one function at the same time (the decision to add the title to the google sheet as well came later). At first I though I might be able to add it with a simple append_row statement within my user_data() function but it wasn't as easy as that. 
+
+I tried turning these variables into global variables and use them but this turned out to be a fail too. I then came up with a solution and on paper it should have worked but I kept getting error message after error message. So I contacted Tutor Support who assisted me and pointed out that in my update_sheet() function the add_data.append_row(name1, name2, number) was missing squared brackets to turn it into a list rather than a string. After changing this, the entered details finally showed up in my Google Sheet.
 
 [Back to the Top](#table-of-contents)
 
 
-### Browser Testing
------------------------
-
-The programme has been tested on Google Chrome, Firefox and Safari without any issues. Due to the nature of the programme, it is not suitable for mobile phones and smaller devices.
-
-
-### Validators 
+### Validators Testing
 ----------------------
 
 The code has been tested by running it through the PeP8. Almost all of the errors which have been encountered were due to trailing whitespaces or either too many or not enough blank lines.
@@ -219,33 +220,19 @@ No errors were found during the final check.
 
 -----------------------------
 
+### Browser Testing
+-----------------------
+
+The programme has been tested on Google Chrome, Firefox and Safari without any issues. Due to the nature of the programme, it is not suitable for mobile phones and smaller devices.
+
 ### Issues/Bugs Fixed 
 -----------------------------
 
-  Any issues or bugs that were encountered were mainly due to indentation errors spelling mistakes and import mistakes.
-  These were fixed in production as they were found so when it came to validating my code with the PEP8 validator
-  there were no errors and my code was clean.  
+
 
 
 [Back to the Top](#table-of-contents)
 
-
-
-
-### Git and GitHub 
-----------------------
-
-Local repository and IDE used: GitPod & VsCode for early trials of how to move forward.
-Remote repository used: GitHub
-
-Steps followed: 
-- I created a new public repository on GitHub using the Code Institute template.
-- I then created a workspace and started coding on GitPod. 
-- All relevant files were created. 
-- To save my work safely I continued to use the terminal consistently by using: 
-    - **git add .** to add work to git
-    - **git commit -m""** to commit the work 
-    - **git push** to update work to GitHub 
 
 ---------------------------
 ### Deployment to Heroku
