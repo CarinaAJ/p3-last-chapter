@@ -135,7 +135,7 @@ def user_data():
         check_details = input("Please enter now: ")
         check_details = check_details.strip()
         if check_details == "1":
-            print("Alright! \U0001F44D Let's finish your order \U0001F642")
+            print("Alright!\U0001F44D Let's finish your order \U0001F642")
             print("..........................................")
             time.sleep(2)
             break
