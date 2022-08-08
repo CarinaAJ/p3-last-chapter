@@ -116,7 +116,7 @@ def user_data():
     """
     while True:
         print()
-        print("Let me now grab your details now \U0001F58A")
+        print("Let me grab your details now \U0001F58A")
         print()
         time.sleep(0.5)
         fname = input("Please enter your first name: ")

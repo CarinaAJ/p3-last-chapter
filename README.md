@@ -111,7 +111,7 @@ As this project has been linked to a Google Sheet, I added a small paragraph to 
 ----------------------------------------
 ### Enter details
 
-The user is now asked to enter the first and last name and his UK mobile number.
+The user is now asked to enter their first and last name, and his UK mobile number.
 
 ![Details](readme-assets/enter-details.png)
 
@@ -161,7 +161,7 @@ If he wishes to place another order, he is asked to enter Y and the programme st
 ----------------------------------------
 
 - To migrate the booklist to a Google sheet and pull out the titles from there for a wider selection
-- To give the user the option to enter an email address instead off or addition to a phone number
+- To give the user the option to enter an email address instead of or addition to a phone number
 - To allow the user to order multiple books at the same time
 
 ----------------------------------------
@@ -188,7 +188,7 @@ If he wishes to place another order, he is asked to enter Y and the programme st
 
 The site has been tested by me thoroughly during its creation to ensure that the programme runs as it should and errors are being caught. Friends also tested it on a variation of laptops and with different browsers without any issues.
 
-I had a lot of fun creating my little bookshop and enjoyed it very much. I did, however, ran into a few issues:
+I had a lot of fun creating my little bookshop and enjoyed it very much. I did, however, run into a few issues:
 
 1) At first I only had one break statement in my order_book() function, so every time I ran the programme it jumped back to the beginning instead of going ahead to the user_data() function. I had it working before, but discovered that it was only because I entered (by chance) the only number that had the break statement included. After having posted my question in the Slack Channel, I saw my issue a couple of minutes later and entered a break statement after each choice. This fixed my problem.
 
@@ -196,7 +196,7 @@ I had a lot of fun creating my little bookshop and enjoyed it very much. I did, 
 
 3) My biggest issue, however, was adding the customer's details to my Google Sheet. I tried endless variations and looked at the love sandwich project for guidance as well as other similar projects. Unfortunately, none of them helped me find the answer, because unlike them, I wanted to add three variables (fname, lname and mnumber) from one function at the same time (the decision to add the title to the Google Sheet as well came later). At first I thought I might be able to add it with a simple append_row statement within my user_data() function, but it wasn't as easy as that. 
 
-I tried turning these variables into global variables and using them, but this turned out to be a fail too. I then came up with a solution and, on paper, it should have worked, but I kept getting error message after error message. So I contacted Tutor Support, who helped me and pointed out that the add_data.append_row (name1, name2, number) in my update_sheet() function was missing square brackets, converting it to a list rather than a string. After changing this, the entered details finally showed up in my Google Sheet.
+I tried turning these variables into global variables and using them, but this turned out to be unsuccessful too. I then came up with a solution and, on paper, it should have worked, but I kept getting error message after error message. So I contacted Tutor Support, who helped me and pointed out that the add_data.append_row (name1, name2, number) in my update_sheet() function was missing square brackets, converting it to a list rather than a string. After changing this, the entered details finally showed up in my Google Sheet.
 
 [Back to the Top](#table-of-contents)
 
@@ -239,7 +239,7 @@ The website was deployed by following the steps below:
 
 6. Now the 'Deploy' section needs to be selected from the menu and connect it to github.
 
-7. Enter the name of the repositry we want to connect it with and click 'Connect'
+7. Enter the name of the repository we want to connect it with and click 'Connect'
 
 8. The choice appears now to either deploy using automatic deploys or manual deployment, which deploys the current state of the branch.
 
@@ -259,10 +259,10 @@ The website was deployed by following the steps below:
         * Final version:
     for index_list, title in book_list.items():
                 print(index_list, title)
-- [Python Basics](https://pythonbasics.org/multiple-return/) - guidance on how to return multiple variables from a function
+- [Python Basics](https://pythonbasics.org/multiple-return/) - a reminder on how to return multiple variables from a function
 - [GeeksForGeeks](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/) - help on which module to import and how to create my header
 - [W3 School](https://www.w3schools.com/howto/howto_css_fixed_footer.asp) - how to fix my social icons to the footer
-- Love Sandwiches - for general guidance 
+- Love Sandwiches - for general guidance and how to set up my API
 
 The text for this programme has been written by myself.
 
