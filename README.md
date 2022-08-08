@@ -202,7 +202,7 @@ I tried turning these variables into global variables and using them, but this t
 
 ## Unfixed Bugs
 
-At the moment the time printed on the receipt is 1 hour behind. I haven't figured out if this is because of another timezone or still applies winter time. As it doesn't affect the functionality of the program and is solely for asthetic purposes/receipt I decided to leave it for now.
+At the moment, the time printed on the receipt is 1 hour behind. I haven't figured out if this is because of another timezone or it still applies to winter time. As it doesn't affect the functionality of the program and is solely for aesthetic purposes (the receipt) I decided to leave it for now.
 
 
 ### Validators Testing
