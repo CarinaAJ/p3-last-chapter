@@ -168,7 +168,6 @@ def update_sheet(name1, name2, number, title, worksheet):
     """"
     Function to update the Google Sheet
     with the user's details and selected title
-    without displaying it in the programme
     """
     add_data = SHEET.worksheet(worksheet)
     add_data.append_row([name1, name2, number, title])

@@ -1,7 +1,5 @@
 # The Last Chapter
 
-## A website to browse and order books
-
 ![Landing Page](readme-assets/landing-page.png)
 
 --------------------------------------
@@ -26,23 +24,21 @@
 ## Description
 ----------------------------------------
 
-As an avid reader, I wanted to create a little bookshop and allow the user to browse and have a look at the available titles and order a book if he wishes. 
+As an avid reader, I wanted to create a little bookshop and allow the user to browse and have a look at the available titles and order a book if he wishes. The live site can be found [here](https://last-chapter.herokuapp.com/).
 
 ----------------------------------------
 
 ## Theme
 
 ----------------------------------------
-Despite the project being entirely text-based, I implemented a few little things to make it more user-friendly. When the user enters the site, he will be greeted with a big heading and the name of the bookshop, ‘The Last Chapter’. Furthermore, I added emojis throughout the entire programme where appropriate and added slight delays for various reasons. An explanation follows where the sleep function has been used.
+Despite the project being entirely text-based, I implemented a few little things to make it more appealing to the user. When the user enters the site, he will be greeted with a big heading and the name of the bookshop, ‘The Last Chapter’. I also added emojis throughout the entire programme when I felt it would be beneficial and added slight delays for various reasons. An explanation follows where the sleep function has been used.
 
 ![Bookshop Name](readme-assets/theme-last-chapter.png)
 
 
------
-
+----------------------------------------
 ## User Experience
 ----------------------------------------
-
 
 ### User Stories
 ----------------------------------------
@@ -63,6 +59,8 @@ As a returning visitor:
 Before I started my programme I created a flowchart so I knew the structure of my programme and would be able to look at it for guidance during the process.
 
 ![Flowchart](readme-assets/flowchart-last-chapter-.png)
+
+[Back to the Top](#table-of-contents)
 
 ----------------------------------------
 ## Features
@@ -85,7 +83,7 @@ If the user changes his mind, he can leave the shop by entering N.
 ----------------------------------------
 ### See Selection/second decision
 
-If the user decides to have a look, a list of books will be printed and displayed. To create anticiptation the .sleep() function has been implemented with a delay of 1 second to display the titles.
+If the user decides to have a look, a list of books will be printed and displayed. To create a little bit of anticiptation the .sleep() function has been implemented with a delay of 1 second to display all titles.
 
 ![Book List](readme-assets/book-list.png)
 
@@ -99,14 +97,14 @@ If the user decides to not go ahead and order a book, he can enter any other key
 ----------------------------------------
 ### Select Book
 
-If the user wants to order a book, he is asked to enter a number between 1 and 8 to choose the desired title. And a couple of examples are being mentioned for guidance.
+If the user wants to order a book, he is asked to enter a number between 1 and 8 to choose the desired title. A couple of examples are being mentioned for guidance.
 
 ![Second Choice - Select Title](readme-assets/second-choice-continue.png)
 
 ----------------------------------------
 ### User Information
 
-As this project has been linked to a Google Sheet, I added a small paragraph to inform the user that the data will be added to this sheet but confirm that the data will only be collected for the purpose of this project and only be seen by me. I added a 5 second delay to allow the user enough time to read this message before the programme continues. To highlight it is not part of the programme this text has been put in parentheses.
+As this project has been linked to a Google Sheet, I added a small paragraph to inform the user that the data will be added to this sheet but confirm that it will be collected solely for the purpose of this project and only be seen by me. I added a 5 second delay to allow the user enough time to read this message before the programme continues. To highlight it is not part of the programme itself, this text has been put in parentheses.
 
 ![User Information](readme-assets/user-information.png)
 
@@ -129,7 +127,7 @@ After entering all his details, the user can then read over them again and eithe
 
 ![Confirm Details - No](readme-assets/confirm-details-no.png)
 
-If he confirms his choice, a message appears letting the user know we can finish up this order now.
+If he confirms his choice, a message appears letting the user that the order can now be finished up.
 
 ![Confirm Details - Yes](readme-assets/confirm-details-yes.png)
 
@@ -157,47 +155,42 @@ If he wishes to place another order, he is asked to enter Y and the programme st
 
 ![Order another book](readme-assets/last-choice-new-start.png)
 
+[Back to the Top](#table-of-contents)
+
 ## Future Features
---------------------------
+----------------------------------------
 
 - To migrate the booklist to a Google sheet and pull out the titles from there for a wider selection
 - To give the user the option to enter an email address instead off or addition to a phone number
 - To allow the user to order multiple books at the same time
 
-
-[Back to the Top](#table-of-contents)
-
-
------
+----------------------------------------
 ## Technologies Used 
----------------------
+----------------------------------------
 
 - Python, to write my code
 - Heroku, to deploy my site
 
------------------------------
+----------------------------------------
 
 ## Python Libraries/Modules
----------------------------
+----------------------------------------
 
 - Time - to add the .sleep() function and delay my code in the terminal
 - [Datetime](https://www.programiz.com/python-programming/datetime/strftime) - to print the current date and time on the receipt
 - [Sys](https://www.hashbangcode.com/article/stopping-code-execution-python) - to exit the programme
-- [Pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/) - to create a header    for the bookshop,
+- [Pyfiglet](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/) - to create a header  for the bookshop,
 - Gspread - as API for my Google Sheet
-
-[Back to the Top](#table-of-contents)
-
 
 --------------------------------------
 ## Testing & Issues Encountered
 --------------------------------------
 
-The site has been tested by me thoroughly during its creation to ensure that the programme runs as it should and errors are being caught.
+The site has been tested by me thoroughly during its creation to ensure that the programme runs as it should and errors are being caught. Friends also tested it on a variation of laptops and with different browsers without any issues.
 
-I had a lot of fun creating my little bookshop and enjoyed it very much. Nevertheless, I encontered a few issues during the creation: 
+I had a lot of fun creating my little bookshop and enjoyed it very much. I did, however, ran into a few issues:
 
-1) At first I only had one break statement in my order_book() function, so every time I ran the programme it jumped back to the beginning instead of going ahead to the user_data() function. I had it working before, but only because I entered by chance the only number that had the break statement included. After having posted my question in the Slack Channel, I saw my issue a couple of minutes later and entered a break statement after each choice. This fixed my problem.
+1) At first I only had one break statement in my order_book() function, so every time I ran the programme it jumped back to the beginning instead of going ahead to the user_data() function. I had it working before, but discovered that it was only because I entered (by chance) the only number that had the break statement included. After having posted my question in the Slack Channel, I saw my issue a couple of minutes later and entered a break statement after each choice. This fixed my problem.
 
 2) When printing the receipt, I wanted to display the choice the user made together with a few extra pieces of information but kept running into error messages. After reading over the Code Institute material over and over again, I found a simple solution and made my select_book variable a global variable. This allowed me to show the title the user had selected on the receipt successfully.
 
@@ -207,9 +200,13 @@ I tried turning these variables into global variables and using them, but this t
 
 [Back to the Top](#table-of-contents)
 
+## Unfixed Bugs
+
+At the moment the time printed on the receipt is 1 hour behind. I haven't figured out if this is because of another timezone or still applies winter time. As it doesn't affect the functionality of the program and is solely for asthetic purposes/receipt I decided to leave it for now.
+
 
 ### Validators Testing
-----------------------
+--------------------------------------
 
 The code has been tested by running it through the PeP8. Almost all of the errors that have been encountered were due to trailing whitespaces or either too many or not enough blank lines.
 
@@ -217,53 +214,42 @@ No errors were found during the final check.
 
 ![PEP8](readme-assets/pep8-test-final.png)
 
------------------------------
+--------------------------------------
 
 ### Browser Testing
------------------------
+--------------------------------------
 
 The programme has been tested on Google Chrome, Firefox and Safari without any issues. Due to the nature of the programme, it is not suitable for mobile phones and smaller devices.
 
-### Issues/Bugs Fixed 
------------------------------
-
-
-
-
-[Back to the Top](#table-of-contents)
-
-
----------------------------
+--------------------------------------
 ### Deployment to Heroku
----------------------------
+--------------------------------------
 
-The website was deployed to heroku by doing the following: 
+The website was deployed by following the steps below: 
 
-1. Navigate to [heroku](https://id.heroku.com/login). 
+1. Log in [Heroku](https://id.heroku.com/login). 
 
-2. Click "new" and create a new App. 
+2. Click 'New' and select 'Create new app'
 
-3. Give your app a name, choose your region and Click "Create app". 
+3. Choose a name for the app, region and click on 'Create app'
 
-4. The menus that we are concerned with are "Deploy" and "Settings". Click on "Settings" First. 
+4. Only 'Deploy' and 'Settings' are relevant from the menu section. Starting with the 'Settings' first.
 
-5. Buildpacks now need to be added. These install future dependancies that we need outside of the requirements file. The first is python and the second is node.js. Select Python first and then node.js and click save. Make sure they are in this order.
+5. Now Buildpacks need to be added. They install future dependancies that are needed outside of the requirements file. The first is Python and the second is node.js. Python needs to be selected first and then node.js. Save this selection.
 
-6. Then go to the deploy section and choose your deployment method. To connect with github select github and confirm. 
+6. Now the 'Deploy' section needs to be selected from the menu and connect it to github.
 
-7. Search for your repo, select it and click connect. 
+7. Enter the name of the repositry we want to connect it with and click 'Connect'
 
-8. You can choose to either deploy using automatic deploys which means heroku will rebuild the app everytime you push your changes. For this option choose the branch to deploy and click enable automatic deploys. This can be changed at a later date to manual. Manual deployment deploys the current state of a branch.  
+8. The choice appears now to either deploy using automatic deploys or manual deployment, which deploys the current state of the branch.
 
 9. Click deploy branch. 
-
-10. If successful you should be able to view your deployed app by clicking "View". 
     
 
 ## Credits 
---------------------
+--------------------------------------
 
-- [Stackoverflow](https://stackoverflow.com/questions/10660435/how-do-i-split-the-definition-of-a-long-string-over-multiple-lines) - for guidance on how to display long string
+- [Stackoverflow](https://stackoverflow.com/questions/10660435/how-do-i-split-the-definition-of-a-long-string-over-multiple-lines) - for guidance on how to display a multiline string
 - [Hashbangcode](https://www.hashbangcode.com/article/stopping-code-execution-python) - how to stop the programme
 - [MakeUseOf](https://www.makeuseof.com/how-to-include-emojis-in-your-python-code/) - for the syntax to add emojis
 - [W3 School](https://www.w3schools.com/python/gloss_python_loop_dictionary_items.asp) - to provide me with a better option to iterate through a dictionary than my original code 
@@ -273,18 +259,20 @@ The website was deployed to heroku by doing the following:
         * Final version:
     for index_list, title in book_list.items():
                 print(index_list, title)
-- [Python Basics](https://pythonbasics.org/multiple-return/) - guidane on how to return multiple variables from a function
+- [Python Basics](https://pythonbasics.org/multiple-return/) - guidance on how to return multiple variables from a function
 - [GeeksForGeeks](https://www.geeksforgeeks.org/python-ascii-art-using-pyfiglet-module/) - help on which module to import and how to create my header
 - [W3 School](https://www.w3schools.com/howto/howto_css_fixed_footer.asp) - how to fix my social icons to the footer
 - Love Sandwiches - for general guidance 
 
-[Back to the Top](#table-of-contents)
+The text for this programme has been written by myself.
 
-
------
+--------------------------------------
 ## Acknowledegments
----------------------------
+--------------------------------------
 
+My thanks goes to the Code Institute, my fellow peers and of course my fiancé, Dave for his continuous support (although there were a lot less tantrums this time 😄)
+
+A special thanks also to my amazing Mentor [Martina](https://www.linkedin.com/in/martinaterlevic/) who helped me coming up with this idea.
 
 
 [Back to the Top](#table-of-contents)
