@@ -145,11 +145,15 @@ def user_data():
             print("..........................................")
             time.sleep(2)
             break
-        else:
+        elif check_details == "2":
             print("No worries. Let's fix it! \U0001F642")
             print("Just enter them again to correct them.")
             print()
-
+        else:
+            print("Hmm...that doesn't seem right!\U0001F914")
+            print("Please make sure to enter 1 or 2.")
+            print("Let's start again \U0001F60A ")
+            
     return fname, lname, mnumber
 
 
