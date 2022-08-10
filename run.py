@@ -48,9 +48,15 @@ def enter_or_exit():
             for index_list, title in book_list.items():
                 print(index_list, title)
             break
-        else:
+        elif (decision_user == "N" or decision_user == "n"):
             print("No worries. Thanks for stopping by!\U0001F44B")
             sys.exit()
+        else:
+            print("Hmm...that doesn't seem right!\U0001F914")
+            print("Please make sure to enter Y or N")
+            print()
+            return enter_or_exit()
+            
 
 
 def order_book():
