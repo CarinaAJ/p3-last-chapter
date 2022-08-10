@@ -56,7 +56,6 @@ def enter_or_exit():
             print("Please make sure to enter Y or N")
             print()
             return enter_or_exit()
-            
 
 
 def order_book():
@@ -128,7 +127,7 @@ def user_data():
         fname = input("Please enter your first name: ")
         fname = fname.strip()
         if len(fname) < 1:
-            print("This can not be blank")
+            print("Hmmm...This can not be blank")
             print("Let's start again \U0001F60A")
             return user_data()
         else:
@@ -136,12 +135,12 @@ def user_data():
         lname = input("Please enter your last name: ")
         lname = lname.strip()
         if len(lname) < 1:
-            print("This can not be blank")
+            print("Hmmm...This can not be blank")
             print("Let's start again \U0001F60A")
             return user_data()
         else:
             pass
-        mnumber = input("Please enter your UK mobile number: ")
+        mnumber = input("Please enter your 11-digit UK mobile number: ")
         mnumber = mnumber.strip()
         if validate_number(mnumber):
             print("Perfect. These are your details:\n")
@@ -164,8 +163,8 @@ def user_data():
         else:
             print("Hmm...that doesn't seem right!\U0001F914")
             print("Please make sure to enter 1 or 2.")
-            print("Let's start again \U0001F60A")
-            
+            print("Let's start again from the top \U0001F60A")
+
     return fname, lname, mnumber
 
 
