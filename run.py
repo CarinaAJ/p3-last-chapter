@@ -121,8 +121,6 @@ def user_data():
     """
     while True:
         print()
-        print("Let me grab your details now \U0001F58A")
-        print()
         time.sleep(0.5)
         fname = input("Please enter your first name: ")
         fname = fname.strip()
@@ -184,7 +182,7 @@ def validate_number(numbers):
 
     except ValueError:
         print("\nWhoops!\U0001F914 Please make sure you enter 11 digits.")
-        print("Let's just try this again \U0001F642")
+        print("Let's just try this again from the top \U0001F642")
         print()
         return False
 
@@ -246,6 +244,7 @@ def main():
     )
     time.sleep(5)
     print()
+    print("Let me grab your details now \U0001F58A")
     fname, lname, mnumber = user_data()
     update_sheet(fname, lname, mnumber, select_book, "book_orders")
     print_receipt()
@@ -257,11 +256,11 @@ while True:
     main()
     print(
         """If you want to place another order """
-        """enter Y. If not enter N."""
+        """enter 1. If not enter any other key."""
     )
     stay_or_leave = input("Please choose now: ")
     stay_or_leave = stay_or_leave.strip()
-    if stay_or_leave == "Y" or stay_or_leave == "y":
+    if stay_or_leave == "1":
         continue
     else:
         print()
