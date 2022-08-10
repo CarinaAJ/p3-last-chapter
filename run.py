@@ -126,16 +126,22 @@ def user_data():
         time.sleep(0.5)
         fname = input("Please enter your first name: ")
         fname = fname.strip()
-        if len(fname) < 1:
-            print("Hmmm...This can not be blank")
+        if len(fname) < 1 or fname.isdigit():
+            print(
+                """Hmmm....this doesn't seem right \U0001F914 """
+                """Please make sure to enter a name!"""
+            )
             print("Let's start again \U0001F60A")
             return user_data()
         else:
             pass
         lname = input("Please enter your last name: ")
         lname = lname.strip()
-        if len(lname) < 1:
-            print("Hmmm...This can not be blank")
+        if len(lname) < 1 or lname.isdigit():
+            print(
+                """Hmmm....this doesn't seem right \U0001F914 """
+                """Please make sure to enter a name!"""
+            )
             print("Let's start again \U0001F60A")
             return user_data()
         else:
