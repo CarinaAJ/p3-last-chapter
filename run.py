@@ -127,8 +127,20 @@ def user_data():
         time.sleep(0.5)
         fname = input("Please enter your first name: ")
         fname = fname.strip()
+        if len(fname) < 1:
+            print("This can not be blank")
+            print("Let's start again \U0001F60A")
+            return user_data()
+        else:
+            pass
         lname = input("Please enter your last name: ")
         lname = lname.strip()
+        if len(lname) < 1:
+            print("This can not be blank")
+            print("Let's start again \U0001F60A")
+            return user_data()
+        else:
+            pass
         mnumber = input("Please enter your UK mobile number: ")
         mnumber = mnumber.strip()
         if validate_number(mnumber):
@@ -152,7 +164,7 @@ def user_data():
         else:
             print("Hmm...that doesn't seem right!\U0001F914")
             print("Please make sure to enter 1 or 2.")
-            print("Let's start again \U0001F60A ")
+            print("Let's start again \U0001F60A")
             
     return fname, lname, mnumber
 
