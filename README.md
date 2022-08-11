@@ -91,7 +91,7 @@ If the user enters a invalid input an error message shows up and he will be aske
 ----------------------------------------
 ### See Selection/second decision
 
-If the user decides to have a look, a list of books will be printed and displayed. To create a little bit of anticiptation the .sleep() function has been implemented with a delay of 1 second to display all titles.
+If the user decides to have a look, a list of books will be printed and displayed. To create a little bit of anticipation the .sleep() function has been implemented with a delay of 1 second to display all titles.
 
 ![Book List](readme-assets/book-list.png)
 
@@ -271,7 +271,7 @@ The website was deployed by following the steps below:
 
 4. Only 'Deploy' and 'Settings' are relevant from the menu section. Starting with the 'Settings' first.
 
-5. Now Buildpacks need to be added. They install future dependancies that are needed outside of the requirements file. The first is Python and the second is node.js. Python needs to be selected first and then node.js. Save this selection.
+5. Now Buildpacks need to be added. They install future dependencies that are needed outside of the requirements file. The first is Python and the second is node.js. Python needs to be selected first and then node.js. Save this selection.
 
 6. Now the 'Deploy' section needs to be selected from the menu and connect it to github.
 
@@ -303,7 +303,7 @@ The website was deployed by following the steps below:
 The text for this programme has been written by myself.
 
 --------------------------------------
-## Acknowledegments
+## Acknowledgments
 --------------------------------------
 
 My thanks goes to the Code Institute, my fellow peers and of course my fiancé, Dave for his continuous support (although there were a lot less tantrums this time 😄)
