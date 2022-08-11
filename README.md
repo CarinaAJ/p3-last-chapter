@@ -198,6 +198,8 @@ If he enters 1 the programme starts again from the beginning.
 - To give the user the option to enter an email address instead of or addition to a phone number
 - To allow the user to order multiple books at the same time
 
+At the moment, I am taking the user's data in one function and updating my Google Sheet once the user confirms that all the data is correct. In the future, I might look into dividing this into three smaller functions so that the user doesn't have to enter all the data again from the top and can also select a specific section he made a mistake in and jump to this specific function/input.
+
 ----------------------------------------
 ## Technologies Used 
 ----------------------------------------
