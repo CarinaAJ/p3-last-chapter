@@ -127,7 +127,7 @@ def user_data():
         if len(fname) < 1 or fname.isdigit():
             print(
                 """Hmmm....this doesn't seem right \U0001F914 """
-                """Please make sure to enter a name!"""
+                """ Please make sure to enter a name!"""
             )
             print("Let's start again \U0001F60A")
             return user_data()
@@ -138,7 +138,7 @@ def user_data():
         if len(lname) < 1 or lname.isdigit():
             print(
                 """Hmmm....this doesn't seem right \U0001F914 """
-                """Please make sure to enter a name!"""
+                """ Please make sure to enter a name!"""
             )
             print("Let's start again \U0001F60A")
             return user_data()
@@ -156,7 +156,7 @@ def user_data():
         check_details = input("Please enter now: ")
         check_details = check_details.strip()
         if check_details == "1":
-            print("Alright!\U0001F44D Let's finish your order \U0001F642")
+            print("Alright! \U0001F44D Let's finish your order \U0001F642")
             print("..........................................")
             time.sleep(2)
             break

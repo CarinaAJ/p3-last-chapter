@@ -14,9 +14,9 @@
 - [User Experience](#user-experience)
 - [Features](#features)
     - [Future Features](#future-features)
-- [Testing](#testing)
-- [Technologies](#technologies)
-- [Deployment](#cloning)
+- [Testing](#testing-and-issues-encountered)
+- [Technologies](#technologies-used)
+- [Deployment](#deployment-to-heroku)
 - [Credits](#credits)
 
 ----------------------------------------
@@ -81,6 +81,14 @@ If the user changes his mind, he can leave the shop by entering N.
 ![First Choice - Leave Shop](readme-assets/first-choice-no.png)
 
 ----------------------------------------
+
+### Invalid Input
+
+If the user enters a invalid input an error message shows up and he will be asked to enter either Y or N
+
+![Invalid Input 1](readme-assets/invalid-input1.png)
+
+----------------------------------------
 ### See Selection/second decision
 
 If the user decides to have a look, a list of books will be printed and displayed. To create a little bit of anticiptation the .sleep() function has been implemented with a delay of 1 second to display all titles.
@@ -111,25 +119,51 @@ As this project has been linked to a Google Sheet, I added a small paragraph to 
 ----------------------------------------
 ### Enter details
 
-The user is now asked to enter their first and last name, and his UK mobile number.
+The user is now asked to enter their first and last name, and his 11-digit UK mobile number.
 
 ![Details](readme-assets/enter-details.png)
 
-### Enter Details - incorrect mobile number
+----------------------------------------
+
+### Invalid Input - Name
+
+If the user enters a invalid input he will be asked to start again from the top.
+
+![Invalid Input2](readme-assets/invalid-input2.png)
+
+![Invalid Input3](readme-assets/invalid-input3.png)
+
+----------------------------------------
+
+### Enter Details - Invalid Number
 
 If the user doesn't enter a valid 11-digit UK number, a message pops up and informs him that it is incorrect. He can then enter the details again. Until the user enters an 11-digit number, the programme keeps looping until a valid number has been entered. 
 
 ![Wrong mobile number](readme-assets/enter-details-incorrect-number.png)
 
-### Confirm or correct details
+----------------------------------------
 
-After entering all his details, the user can then read over them again and either confirm the details by entering the digit 1, or enter the number 2 if he wishes to correct something.
+### Confirm Or Correct Details
+
+After entering all his details, the user can then read over them again and either confirm the details by entering the digit 1, or enter the number 2 if he wishes to correct something. He will then be asked to enter all his details again from the top.
 
 ![Confirm Details - No](readme-assets/confirm-details-no.png)
 
 If he confirms his choice, a message appears letting the user that the order can now be finished up.
 
 ![Confirm Details - Yes](readme-assets/confirm-details-yes.png)
+
+----------------------------------------
+
+### Invalid Input
+
+If the user enters an invalid input, an error message appears and it loops back to the start and he will be asked to enter his details again.
+
+![Invalid Input4](readme-assets/invalid-input4.png)
+
+
+----------------------------------------
+
 
 ## Confirmed Details & Google Sheet
 
@@ -146,12 +180,12 @@ At this stage, the user is being thanked for supporting his local bookshop, and 
 
 ## Last choice
 
-The user is now being asked if he wishes to place another order or leave the shop. If he wishes to leave, he is asked to enter N, and a goodbye message pops up and the programme ends.
+The user is now being asked if he wishes to place another order or leave the shop. If he wishes to place another order, he is asked to enter 1 and if he wants to leave he should press any other key.
 
 ![Leave Shop](readme-assets/last-choice-exit.png)
 
 
-If he wishes to place another order, he is asked to enter Y and the programme starts again from the beginning.
+If he enters 1 the programme starts again from the beginning.
 
 ![Order another book](readme-assets/last-choice-new-start.png)
 
@@ -183,7 +217,7 @@ If he wishes to place another order, he is asked to enter Y and the programme st
 - Gspread - as API for my Google Sheet
 
 --------------------------------------
-## Testing & Issues Encountered
+## Testing And Issues Encountered
 --------------------------------------
 
 The site has been tested by me thoroughly during its creation to ensure that the programme runs as it should and errors are being caught. Friends also tested it on a variation of laptops and with different browsers without any issues.
@@ -202,7 +236,7 @@ I tried turning these variables into global variables and using them, but this t
 
 ## Unfixed Bugs
 
-At the moment, the time printed on the receipt is 1 hour behind. I haven't figured out if this is because of another timezone or it still applies to winter time. As it doesn't affect the functionality of the program and is solely for aesthetic purposes (the receipt) I decided to leave it for now.
+At the moment, the time printed on the receipt is UTC-time. As it doesn't affect the functionality of the program and is solely for aesthetic purposes (the receipt) I decided to leave it for now.
 
 
 ### Validators Testing
